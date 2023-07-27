@@ -1,11 +1,16 @@
-const gridContainer = document.querySelector("#grid")
+const gridContainer = document.querySelector("#grid");
+const defaultSize = 3;
 
-for (var i = 0; i < 2; i++) {
-    let itemContainer = document.createElement("div")
-    for (var j = 0; j < 2; j++) {
-        let newItem = document.createElement("p")
-        newItem.textContent = j;
-        itemContainer.appendChild(newItem)
+function makeGrid(size) {
+    const gridArea = size * size;
+
+    for (var i = 0; i < gridArea; i++) {
+        let newItem = document.createElement("div")
+        newItem.textContent = i;
+
+        gridContainer.appendChild(newItem)
     }
-    gridContainer.appendChild(itemContainer)
+    gridContainer.style.gridTemplateColumns = "repeat(" + size + ", 1fr)"
 }
+
+makeGrid(defaultSize)
