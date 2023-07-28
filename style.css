@@ -2,8 +2,31 @@
     margin: 0;
 }
 
+#title-container {
+    display: flex;
+    justify-content: center;
+}
+
+#quesoton {
+    display: flex;
+    justify-content: center;
+}
+
+#grid-container {
+    display: flex;
+    justify-content: center;
+}
+
 #grid {
     width: 400px;
     height: 400px;
     display: grid;
+}
+
+#grid div {
+    border: 1px solid silver;
+}
+
+.gray-bg {
+    background-color: silver;
 }
